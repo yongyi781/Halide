@@ -8,6 +8,7 @@
 #include "Debug.h"
 #include "ModulusRemainder.h"
 #include <iostream>
+#include <algorithm>
 
 namespace Halide {
 namespace Internal {

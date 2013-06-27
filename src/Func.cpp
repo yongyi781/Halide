@@ -13,6 +13,7 @@
 #include "Debug.h"
 #include <iostream>
 #include <fstream>
+#include <algorithm>
 
 namespace Halide {
 

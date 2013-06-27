@@ -1,6 +1,7 @@
 #include "VectorizeLoops.h"
 #include "IRMutator.h"
 #include "Scope.h"
+#include <algorithm>
 
 namespace Halide {
 namespace Internal {

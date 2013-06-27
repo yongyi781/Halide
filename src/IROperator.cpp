@@ -3,6 +3,7 @@
 #include "Simplify.h"
 #include <iostream>
 #include <math.h>
+#include <algorithm>
 
 namespace Halide { 
 namespace Internal {
