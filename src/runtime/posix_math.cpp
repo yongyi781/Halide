@@ -7,8 +7,8 @@
 
 extern "C" {
 #ifdef _WIN32
-extern float roundf(float);
-extern double round(double);
+float roundf(float value) { return floor(value + 0.5f); }
+double round(double value) { return floor(value + 0.5); }
 #endif
 
 INLINE float sqrt_f32(float x) {return sqrtf(x);}
@@ -81,8 +81,8 @@ INLINE int64_t abs_i64(int64_t a) {return a >= 0 ? a : -a;}
 INLINE float abs_f32(float a) {return fabsf(a);}
 INLINE double abs_f64(double a) {return fabs(a);}
 
-INLINE float nan_f32() {return NAN;}
-INLINE float neg_inf_f32() {return -INFINITY;}
-INLINE float inf_f32() {return INFINITY;}
+INLINE float nan_f32() {return std::numeric_limits<float>::signaling_NaN();}
+INLINE float neg_inf_f32() {return -std::numeric_limits<float>::infinity();}
+INLINE float inf_f32() {return std::numeric_limits<float>::infinity();}
 
 }
